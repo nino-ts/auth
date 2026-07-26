@@ -1,0 +1,34 @@
+{
+    "description": "Authentication for Ninots Framework",
+    "devDependencies": {
+        "@types/bun": "^1.3.13"
+    },
+    "main": "index.ts",
+    "name": "@ninots/auth",
+    "peerDependencies": {
+        "typescript": "^6.0.3"
+    },
+    "scripts": {
+        "test": "bun test"
+    },
+    "type": "module",
+    "version": "0.0.1",
+    "exports": {
+        ".": {
+            "types": "./dist/index.d.ts",
+            "import": "./index.ts",
+            "default": "./index.ts"
+        }
+    },
+    "types": "./dist/index.d.ts",
+    "files": [
+        "dist",
+        "src",
+        "index.ts"
+    ],
+    "publishConfig": {
+        "access": "public",
+        "registry": "https://registry.npmjs.org"
+    },
+    "license": "MIT"
+}
