@@ -373,7 +373,3 @@ Coming from separate packages? See [MIGRATION.md](./MIGRATION.md) for a complete
 ## License
 
 MIT License - See LICENSE file for details.
-
-## Publish note (Sprint 14)
-
-Published independently at `0.0.1` (npm + JSR). Zero cross-package `@ninots/*` deps.

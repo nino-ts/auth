@@ -1,46 +1,23 @@
 {
-    "description": "Authentication for Ninots Framework",
-    "devDependencies": {
-        "@types/bun": "^1.3.13"
-    },
-    "main": "index.ts",
     "name": "@ninots/auth",
-    "peerDependencies": {
-        "typescript": "^6.0.3"
-    },
-    "scripts": {
-        "test": "bun test"
-    },
+    "main": "index.ts",
+    "module": "index.ts",
     "type": "module",
     "version": "0.0.1",
-    "exports": {
-        ".": {
-            "types": "./dist/index.d.ts",
-            "import": "./index.ts",
-            "default": "./index.ts"
-        }
-    },
-    "types": "./dist/index.d.ts",
-    "files": [
-        "LICENSE",
-        "README.md",
-        "dist",
-        "dist/index.d.ts",
-        "index.ts",
-        "jsr.json",
-        "src"
-    ],
-    "publishConfig": {
-        "access": "public",
-        "registry": "https://registry.npmjs.org"
-    },
+    "description": "Authentication for Ninots Framework",
+    "author": "Ninots Framework",
+    "keywords": ["ninots", "framework", "authentication", "auth"],
     "license": "MIT",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/nino-ts/auth.git"
-    },
-    "bugs": {
-        "url": "https://github.com/nino-ts/auth/issues"
-    },
-    "homepage": "https://github.com/nino-ts/auth#readme"
+    "scripts": { "test": "bun test" },
+    "publishConfig": { "access": "public", "registry": "https://registry.npmjs.org" },
+    "repository": { "type": "git", "url": "https://github.com/nino-ts/auth.git" },
+    "bugs": { "url": "https://github.com/nino-ts/auth/issues" },
+    "homepage": "https://github.com/nino-ts/auth#readme",
+    "devDependencies": { "@types/bun": "latest" },
+    "peerDependencies": { "typescript": "^6.0.3" },
+    "exports": { ".": { "types": "./dist/index.d.ts", "import": "./index.ts", "default": "./index.ts" } },
+    "types": "./dist/index.d.ts",
+    "files": ["LICENSE", "README.md", "dist", "dist/index.d.ts", "index.ts", "jsr.json", "src"],
+    "engines": { "bun": ">=1.0.0" },
+    "packageManager": "~bun@1.0.0"
 }
