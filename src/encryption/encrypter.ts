@@ -148,7 +148,8 @@ export class WebEncrypter implements Encrypter {
             hash: "SHA-256",
             name: "HMAC",
         } satisfies Parameters<typeof crypto.subtle.importKey>[2];
-        const hmacKey = await crypto.subtle.importKey("raw", this.key, hmacParams, false, ["sign"]);
+        const keyBytes = new Uint8Array(this.key);
+        const hmacKey = await crypto.subtle.importKey("raw", keyBytes, hmacParams, false, ["sign"]);
 
         const payload = this.encoder.encode(iv + value);
         const signature = await crypto.subtle.sign("HMAC", hmacKey, payload);
@@ -164,7 +165,7 @@ export class WebEncrypter implements Encrypter {
             name: isGCM ? "AES-GCM" : "AES-CBC",
         } satisfies Parameters<typeof crypto.subtle.importKey>[2];
 
-        return crypto.subtle.importKey("raw", this.key, keyParams, false, [usage]);
+        return crypto.subtle.importKey("raw", new Uint8Array(this.key), keyParams, false, [usage]);
     }
 
     /**
