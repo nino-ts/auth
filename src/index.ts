@@ -11,4 +11,3 @@ export * from "./hashing/bcrypt-hasher";
 export * from "./jwt/jwt-decoder";
 export * from "./oauth/OAuthManager";
 export * from "./oauth/providers/GitHubProvider";
-export * from "./session/session-manager";
