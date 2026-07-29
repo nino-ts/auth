@@ -24,7 +24,7 @@ export interface AuthManagerConfig {
  * const auth = new AuthManager();
  * auth.extend('session', (name) => {
  *   const provider = new DatabaseUserProvider(...);
- *   const session = new Session(...);
+ *   // `session` implements AuthSessionStore (app adapter / @ninots/session)
  *   return new SessionGuard(name, provider, session);
  * });
  *

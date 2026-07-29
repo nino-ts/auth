@@ -5,7 +5,7 @@ export type { Authenticatable } from "./src/contracts/authenticatable";
 export type { ConnectionInterface } from "./src/contracts/connection-interface";
 export type { Guard, StatefulGuard } from "./src/contracts/guard";
 export type { Hasher } from "./src/contracts/hasher";
-export type { SessionInterface } from "./src/contracts/session-interface";
+export type { AuthSessionStore, SessionInterface } from "./src/contracts/session-interface";
 export type { UserProvider } from "./src/contracts/user-provider";
 // Encryption
 export { WebEncrypter } from "./src/encryption/encrypter";
@@ -36,9 +36,3 @@ export { OAuthUser } from "./src/oauth/OAuthUser";
 export { GitHubProvider } from "./src/oauth/providers/GitHubProvider";
 // Providers
 export { DatabaseUserProvider } from "./src/providers/database-provider";
-export { DatabaseSessionDriver } from "./src/session/drivers/database-driver";
-export { FileSessionDriver } from "./src/session/drivers/file-driver";
-export { MemorySessionDriver } from "./src/session/drivers/memory-driver";
-// Session
-export { Session } from "./src/session/session";
-export { SessionManager } from "./src/session/session-manager";
