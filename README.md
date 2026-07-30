@@ -4,9 +4,11 @@ Authentication for Bun with Laravel-like guards, providers, and unified auth uti
 
 ## Overview
 
-`@ninots/auth` is the authentication package for the Ninots Framework: guards, user providers, hashing, JWT, OAuth helpers, and encryption.
+`@ninots/auth` is the authentication package for the Ninots Framework: guards, user providers, hashing, JWT, and encryption.
 
 **Session storage lives in [`@ninots/session`](https://www.npmjs.com/package/@ninots/session).** This package only defines a local `SessionInterface` / `AuthSessionStore` seam that the app injects (adapter). Zero `@ninots/*` cross-deps.
+
+**OAuth / social login lives in [`@ninots/social-auth`](https://www.npmjs.com/package/@ninots/social-auth).**
 
 ## Features
 
@@ -15,7 +17,6 @@ Authentication for Bun with Laravel-like guards, providers, and unified auth uti
 - **Hashers**: `BcryptHasher`, `ArgonHasher`
 - **Session seam**: `SessionInterface` / `AuthSessionStore` (inject from app)
 - **JWT**: Decoding, verification, JWKs support
-- **Social**: OAuth providers (GitHub; future extract → `@ninots/social-auth`)
 - **Encryption**: Web Crypto API encrypter
 
 ## Installation
@@ -24,6 +25,8 @@ Authentication for Bun with Laravel-like guards, providers, and unified auth uti
 bun add @ninots/auth
 # Session drivers (file / cookie / database):
 bun add @ninots/session
+# OAuth / social (GitHub):
+bun add @ninots/social-auth
 ```
 
 ## Quick Start
@@ -98,15 +101,6 @@ Use `@ninots/session` for file, cookie, and database drivers.
 | `JwtDecoder` | JWT decoding and verification |
 | `JwksCache` | JWKs caching for OIDC |
 | `JwtError` / `JwksError` | JWT-related errors |
-
-### OAuth
-
-| Class | Description |
-|-------|-------------|
-| `OAuthManager` | OAuth provider factory |
-| `AbstractOAuthProvider` | Base class for OAuth providers |
-| `GitHubProvider` | GitHub OAuth provider |
-| `OAuthUser` | Normalized OAuth user data |
 
 ### Encryption
 
@@ -194,6 +188,10 @@ bun test
 Guards are tested against an in-memory fake implementing `SessionInterface` (`tests/mocks/session.mock.ts`).
 
 ## Changelog highlights
+
+### 0.3.0
+
+- **Breaking (SemVer minor in `0.y.z`):** removed public OAuth exports. Use `@ninots/social-auth@^0.1.0`.
 
 ### 0.2.0
 

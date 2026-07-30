@@ -9,5 +9,3 @@ export * from "./encryption/exceptions";
 export * from "./hashing/argon-hasher";
 export * from "./hashing/bcrypt-hasher";
 export * from "./jwt/jwt-decoder";
-export * from "./oauth/OAuthManager";
-export * from "./oauth/providers/GitHubProvider";
