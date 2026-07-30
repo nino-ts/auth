@@ -1,5 +1,17 @@
 # Changelog
 
+## 0.3.0
+
+### Breaking (SemVer minor in `0.y.z`)
+
+- Removed public OAuth exports: `OAuthManager`, `AbstractOAuthProvider`, `OAuthUser`, `GitHubProvider`.
+- OAuth client lives in [`@ninots/social-auth`](https://www.npmjs.com/package/@ninots/social-auth) `@0.1.0`.
+
+### Notes
+
+- Zero `@ninots/*` package dependencies (no import of `@ninots/social-auth`).
+- Compose OAuth in the app: `bun add @ninots/social-auth`.
+
 ## 0.2.0
 
 ### Breaking (SemVer minor in `0.y.z`)
@@ -14,4 +26,4 @@
 ### Notes
 
 - Zero `@ninots/*` package dependencies (no import of `@ninots/session`).
-- OAuth remains in this package until a future `@ninots/social-auth` sprint (ADR naming only in Sprint 17).
+- OAuth naming ADR only in Sprint 17; extract shipped in Sprint 18 (`@ninots/social-auth@0.1.0`).

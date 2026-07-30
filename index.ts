@@ -29,10 +29,5 @@ export type { JwksKey, JwtHeader, JwtPayload } from "./src/jwt/types";
 // Middleware
 export { authenticate } from "./src/middleware/authenticate";
 export { guest } from "./src/middleware/guest";
-export { AbstractOAuthProvider } from "./src/oauth/AbstractOAuthProvider";
-// OAuth
-export { OAuthManager } from "./src/oauth/OAuthManager";
-export { OAuthUser } from "./src/oauth/OAuthUser";
-export { GitHubProvider } from "./src/oauth/providers/GitHubProvider";
 // Providers
 export { DatabaseUserProvider } from "./src/providers/database-provider";
